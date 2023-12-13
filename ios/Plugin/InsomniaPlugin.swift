@@ -7,12 +7,17 @@ import Capacitor
  */
 @objc(InsomniaPlugin)
 public class InsomniaPlugin: CAPPlugin {
-    private let implementation = Insomnia()
-
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.resolve([
-            "value": implementation.echo(value)
-        ])
+    @objc func keepAwake(_ call: CAPPluginCall) {
+        DispatchQueue.main.async {
+            UIApplication.shared.isIdleTimerDisabled = true
+            call.resolve()
+        }
+    }
+    
+    @objc func allowSleepAgain(_ call: CAPPluginCall) {
+        DispatchQueue.main.async {
+            UIApplication.shared.isIdleTimerDisabled = false
+            call.resolve()
+        }
     }
 }

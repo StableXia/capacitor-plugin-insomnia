@@ -1,3 +1,11 @@
 export interface InsomniaPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  /**
+   * 保持应用程序唤醒
+   */
+  keepAwake(): Promise<any>;
+
+  /**
+   * 允许应用程序再次休眠
+   */
+  allowSleepAgain(): Promise<any>;
 }

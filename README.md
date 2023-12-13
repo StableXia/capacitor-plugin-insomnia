@@ -13,24 +13,36 @@ npx cap sync
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
+* [`keepAwake()`](#keepawake)
+* [`allowSleepAgain()`](#allowsleepagain)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### echo(...)
+### keepAwake()
 
 ```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
+keepAwake() => Promise<any>
 ```
 
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
+保持应用程序唤醒
 
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+**Returns:** <code>Promise&lt;any&gt;</code>
+
+--------------------
+
+
+### allowSleepAgain()
+
+```typescript
+allowSleepAgain() => Promise<any>
+```
+
+允许应用程序再次休眠
+
+**Returns:** <code>Promise&lt;any&gt;</code>
 
 --------------------
 
