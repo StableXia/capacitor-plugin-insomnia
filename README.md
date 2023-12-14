@@ -17,8 +17,8 @@ npx cap sync
 
 <docgen-index>
 
-- [`keepAwake()`](#keepawake)
-- [`allowSleepAgain()`](#allowsleepagain)
+* [`keepAwake()`](#keepawake)
+* [`allowSleepAgain()`](#allowsleepagain)
 
 </docgen-index>
 
@@ -35,7 +35,8 @@ keepAwake() => Promise<any>
 
 **Returns:** <code>Promise&lt;any&gt;</code>
 
----
+--------------------
+
 
 ### allowSleepAgain()
 
@@ -47,6 +48,6 @@ allowSleepAgain() => Promise<any>
 
 **Returns:** <code>Promise&lt;any&gt;</code>
 
----
+--------------------
 
 </docgen-api>
